@@ -22,7 +22,4 @@ Route::post('login', LoginController::class)->name('api.login');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', LogoutController::class)->name('api.logout');
-    Route::get('user', function (Request $request) {
-        return new \App\Http\Resources\UserResource($request->user());
-    })->name('api.user');
 });

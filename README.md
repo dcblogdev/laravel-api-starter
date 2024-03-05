@@ -1,4 +1,4 @@
-# Laravel API Auth Starter
+# Laravel API Starter
 
 This is a starter project for Laravel API authentication. 
 It includes a user registration and login system. 
@@ -30,6 +30,16 @@ To login a user, send a POST request to `/api/login` with the following paramete
 - `password`
 
 The response will include a `token` which you can use to authenticate future requests.
+
+### Logout
+
+To logout a user, send a POST request to `/api/logout` include the `token` in the request headers.
+
+After logging out, the token will no longer be valid.
+
+### Authenticated Requests
+
+To make an authenticated request, include the `token` in the request headers.
 
 ### Testing
 
