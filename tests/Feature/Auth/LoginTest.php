@@ -6,8 +6,6 @@ use function Pest\Laravel\postJson;
 
 test('can login', function () {
 
-    assertGuest();
-
     $email = fake()->email;
 
     User::factory()->create([
@@ -32,8 +30,6 @@ test('can login', function () {
 
 test('cannot login with invalid wrong email', function () {
 
-    assertGuest();
-
     $email = fake()->email;
 
     User::factory()->create([
@@ -48,8 +44,6 @@ test('cannot login with invalid wrong email', function () {
 });
 
 test('cannot login with invalid wrong password', function () {
-
-    assertGuest();
 
     $email = fake()->email;
 

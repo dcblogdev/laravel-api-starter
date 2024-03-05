@@ -21,7 +21,6 @@ test('can register', function () {
 });
 
 test('cannot register without a name', function () {
-
     $email = fake()->email;
     User::factory()->create(['email' => $email]);
 
@@ -32,7 +31,6 @@ test('cannot register without a name', function () {
 });
 
 test('cannot register with existing emails', function () {
-
     $email = fake()->email;
     User::factory()->create(['email' => $email]);
 
